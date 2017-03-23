@@ -17,6 +17,9 @@ module Github
       #
       # @api public
       def get_request(path, params = ParamsHash.empty)
+
+        puts "get_request"
+        
         request = Request.new(:get, path, self).call(current_options, params)
         request.auto_paginate
       end
