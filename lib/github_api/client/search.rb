@@ -98,6 +98,8 @@ module Github
       params = arguments(args, required: [:q]).params
       params['q'] ||= arguments.q
 
+puts arguments.params
+
       get_request('/search/users', arguments.params)
     end
 
